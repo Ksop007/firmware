@@ -7,6 +7,9 @@
 #include "core/bus_HAL.h"
 #include "modules/badusb_ble/ducky_typer.h"
 #include <globals.h>
+#ifndef DEVICE_NAME
+#define DEVICE_NAME "ESP32-S3"
+#endif
 
 uint32_t uptimeCallback(cmd *c) {
     // https://github.com/espressif/arduino-esp32/blob/66c9c0b1a6a36b85d27cdac0fb52098368de1a09/libraries/WebServer/examples/AdvancedWebServer/AdvancedWebServer.ino#L64
