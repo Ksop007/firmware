@@ -206,9 +206,23 @@ void showDeviceInfo() {
     area.addLine("SYS_I2C_SCL: " + String(bruceConfigPins.sys_i2c.scl));
     area.addLine("SERIAL TX: " + String(bruceConfigPins.uart_bus.tx));
     area.addLine("SERIAL RX: " + String(bruceConfigPins.uart_bus.rx));
+#ifdef SPI_SCK_PIN
     area.addLine("SPI_SCK_PIN: " + String(SPI_SCK_PIN));
+#else
+    area.addLine("SPI_SCK_PIN: Not defined");
+#endif
+
+#ifdef SPI_MOSI_PIN
     area.addLine("SPI_MOSI_PIN: " + String(SPI_MOSI_PIN));
+#else
+    area.addLine("SPI_MOSI_PIN: Not defined");
+#endif
+
+#ifdef SPI_MISO_PIN
     area.addLine("SPI_MISO_PIN: " + String(SPI_MISO_PIN));
+#else
+    area.addLine("SPI_MISO_PIN: Not defined");
+#endif
     area.addLine("SPI_SS_PIN: " + String(SPI_SS_PIN));
     area.addLine("IR TX: " + String(TXLED));
     area.addLine("IR RX: " + String(RXLED));
